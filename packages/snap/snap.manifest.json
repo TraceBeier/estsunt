@@ -1,0 +1,44 @@
+{
+  "version": "1.0.1",
+  "description": "Web3-native decentralized communication protocol. Encrypted, efficient and borderless.",
+  "proposedName": "Web3MQ",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Generative-Labs/Web3MQ-Snap.git"
+  },
+  "source": {
+    "shasum": "3g5zC+bNb4ChuURNDiBSk/w/QxHubEjSCXzK7AFKlMo=",
+    "location": {
+      "npm": {
+        "filePath": "dist/bundle.js",
+        "iconPath": "images/icon.svg",
+        "packageName": "@web3mq/snap",
+        "registry": "https://registry.npmjs.org/"
+      }
+    }
+  },
+  "initialPermissions": {
+    "snap_notify": {},
+    "snap_manageState": {},
+    "endowment:ethereum-provider": {},
+    "endowment:network-access": {},
+    "endowment:cronjob": {
+      "jobs": [
+        {
+          "expression": "* * * * *",
+          "request": {
+            "method": "fetchNewMessages",
+            "params": {
+              "param1": "foo"
+            }
+          }
+        }
+      ]
+    },
+    "endowment:rpc": {
+      "dapps": true,
+      "snaps": false
+    }
+  },
+  "manifestVersion": "0.1"
+}
